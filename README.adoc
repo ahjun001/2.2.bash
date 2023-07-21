@@ -1,4 +1,4 @@
-= New_technology
+= bash -- Bourne Again SHell
 :backend: asciidoctor
 :github-flavored:  // enables GitHub-specific features like tables, task lists, and fenced code blocks
 ifndef::env-github[:icons: font]
