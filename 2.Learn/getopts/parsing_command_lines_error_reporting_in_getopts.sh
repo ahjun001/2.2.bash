@@ -25,7 +25,7 @@ while getopts :abc:h opt; do
 
     h)
         usage
-        exit 0
+        [[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
         ;;
 
     :)

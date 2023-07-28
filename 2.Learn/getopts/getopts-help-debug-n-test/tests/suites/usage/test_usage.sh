@@ -2,7 +2,7 @@
 
 echo -n 'Testing usage'
 
-# expecting exit 0
+# expecting [[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
 ../getopts-help-debug-n-test.sh -h >/dev/null || exit 1
 var=$(../getopts-help-debug-n-test.sh -h) && [[ ${var:0:6} == $'Usage:' ]] || exit 1
 
@@ -14,4 +14,4 @@ var=$(../getopts-help-debug-n-test.sh -h) && [[ ${var:0:6} == $'Usage:' ]] || ex
 [[ $(../getopts-help-debug-n-test.sh) == 'No flags were passed' ]] || exit 1
 
 
-exit 0
+[[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
